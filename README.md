@@ -10,7 +10,7 @@ Setup
 * [spark-deep-learning release 1.1.0-spark2.3-s2.11](https://spark-packages.org/package/databricks/spark-deep-learning)
 
 Summary of Results
-=================p = Pipeline(stages=[featurizer, lr])
+=================
 
 | Example | Description  |  
 |:------: |:---: |
