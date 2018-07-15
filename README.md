@@ -4,8 +4,8 @@ Examples of Deep Learning Pipelines for Apache Spark
 Setup
 =====
 * Ubuntu 16.04.1
-* Spark 2.3.1
 * Python 3.6.3
+* [Spark 2.3.1](https://spark.apache.org/downloads.html)
 * [Deep Learning Pipelines for Apache Spark](https://github.com/databricks/spark-deep-learning)
 * [spark-deep-learning release 1.1.0-spark2.3-s2.11](https://spark-packages.org/package/databricks/spark-deep-learning)
 
@@ -40,11 +40,10 @@ SparkSession available as 'spark'.
 >>> 
 ```
 
- * ...
- 
- 
- * Compute accuracy
+ * Run [code](https://github.com/lshang0311/spark-deep-learning/blob/master/pyspark_shell_classify_images.py) in shell.
  ```
+ ...
+ 
 >>> predictionAndLabels = df.select("prediction", "label")
 >>> evaluator = MulticlassClassificationEvaluator(metricName="accuracy")
 >>> print("Training set accuracy = " + str(evaluator.evaluate(predictionAndLabels)))
