@@ -15,6 +15,7 @@ Summary of Results
 | Example | Description  |  
 |:------: |:---: |
 | [Image classification](https://medium.com/linagora-engineering/making-image-classification-simple-with-spark-deep-learning-f654a8b876b8)  | Classify images of two persons (S. Jobs and M. Zuckerberg)  | 
+| [Image classification](https://medium.com/linagora-engineering/making-image-classification-simple-with-spark-deep-learning-f654a8b876b8)  | Classify images of two flowers | [Image classification](https://medium.com/linagora-engineering/making-image-classification-simple-with-spark-deep-learning-f654a8b876b8)  | Classify images of two persons (S. Jobs and M. Zuckerberg)  | | [Image classification](https://medium.com/linagora-engineering/making-image-classification-simple-with-spark-deep-learning-f654a8b876b8)  | Classify images of two persons (S. Jobs and M. Zuckerberg)  | (tulips and daisy)  | 
 
 Example Output
 =============
@@ -40,8 +41,8 @@ SparkSession available as 'spark'.
 >>> 
 ```
 
- * Run [code](https://github.com/lshang0311/spark-deep-learning/blob/master/pyspark_shell_classify_images.py) in shell.
-```
+ * Run [code for classify two persons](https://github.com/lshang0311/spark-deep-learning/blob/master/pyspark_shell_classify_images.py) in shell.
+```| [Image classification](https://medium.com/linagora-engineering/making-image-classification-simple-with-spark-deep-learning-f654a8b876b8)  | Classify images of two persons (S. Jobs and M. Zuckerberg)  | 
 ...
  
 >>> predictionAndLabels = df.select("prediction", "label")
@@ -54,4 +55,22 @@ Training set accuracy = 0.5714285714285714   >>> predictionAndLabels = df.select
 [Stage 168:===================================================>   (15 + 1) / 16]Using TensorFlow backend.
 Training set accuracy = 0.5714285714285714   
 ```
+
+ * Run [code for classify two flowers](https://github.com/lshang0311/spark-deep-learning/blob/master/pyspark_shell_classify_flower_photos.py) in shell.
+```
+...
+
+Using TensorFlow backend.
+Using TensorFlow backend.
+[Stage 124:===>                                                    (1 + 8) / 16]Using TensorFlow backend.
+[Stage 124:============================>                           (8 + 8) / 16]Using TensorFlow backend.
+Using TensorFlow backend.
+Training set accuracy = 0.9685314685314685                                      
+>>> 
+```
+
+PySparkShell Application UI
+==========================
+Job stages can be monitored at PySparkShell application UI:
+http://localhost:4040/jobs/
 
